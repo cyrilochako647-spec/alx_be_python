@@ -1,6 +1,6 @@
 
-number1 = 50
-number2 = 46
+number1 = 10
+number2 = 5
 
 
 addition = number1 + number2

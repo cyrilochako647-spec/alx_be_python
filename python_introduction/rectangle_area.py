@@ -1,6 +1,6 @@
 
-length = 27
-width = 16
+length = 10
+width = 5
 
 
 
