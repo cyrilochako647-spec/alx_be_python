@@ -1,7 +1,8 @@
-varnumber=int(input('input a number(1, 10):'))
-result=1
-for count in range (1,11):
-    product=varnumber*count
 
-    print (f"{varnumber}*{count}={product}")
-    
+number = int(input('Enter a number to see its multiplication table: '))
+
+
+for count in range(1, 11):
+    product = number * count
+  
+    print(f"{number} * {count} = {product}")

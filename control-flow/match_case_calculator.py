@@ -1,21 +1,24 @@
-num1=int('enter your first number:')
-num2=int("enter your second number")
-operation=input('user chooses btwn(+,-,/,*):')
+
+num1 = int(input('Enter the first number: '))
+num2 = int(input('Enter the second number: '))
+
+
+operation = input('Choose the operation (+, -, *, /): ')
+
 match operation:
     case '+':
         result = num1 + num2
-        print(f"The result of {num1} + {num2} = {result}")
+        print(f"The result is {result}")
     case '-':
         result = num1 - num2
-        print(f"The result of {num1} - {num2} = {result}")
+        print(f"The result is {result}")
     case '*':
         result = num1 * num2
-        print(f"The result of {num1} * {num2} = {result}")
+        print(f"The result is {result}")
     case '/':
         if num2 == 0:
-            print("❌ Error: Division by zero is not allowed.")
-        else:
+            print("Cannot divide by zero.")
             result = num1 / num2
-            print(f"The result of {num1} / {num2} = {result}")
+            print(f"The result is {result}")
     case _:
         print("⚠️ Invalid operation. Please choose from +, -, *, or /.")
