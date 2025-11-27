@@ -1,5 +1,5 @@
 def display_menu():
-    print("\nShopping List Manager")
+    print("Shopping List Manager")
     print("1. Add Item")
     print("2. Remove Item")
     print("3. View List")
@@ -7,41 +7,45 @@ def display_menu():
 
 
 def main():
-    shopping_list = []
+    shopping_list = []  
 
     while True:
-        display_menu()
-        choice = input("Enter your choice: ")
+        display_menu()  
 
-        if choice == '1':
+        
+        try:
+            choice = int(input("Enter your choice: "))
+        except ValueError:
+            print("Invalid choice. Please enter a number.")
+            continue
+
+        if choice == 1:
             item = input("Enter the item to add: ").strip()
             shopping_list.append(item)
-            print(f"'{item}' added to the list.")
+            print(f"'{item}' has been added.")
 
-        elif choice == '2':
+        elif choice == 2:
             item = input("Enter the item to remove: ").strip()
             if item in shopping_list:
                 shopping_list.remove(item)
-                print(f"'{item}' removed from the list.")
+                print(f"'{item}' has been removed.")
             else:
-                print("Item not found.")
+                print("Item not found in the list.")
 
-        elif choice == '3':
+        elif choice == 3:
             if not shopping_list:
-                print("Your shopping list is empty.")
+                print("Shopping list is empty.")
             else:
-                print("Your Shopping List:")
-                for i, item in enumerate(shopping_list, 1):
-                    print(f"{i}. {item}")
+                print("Shopping List:")
+                for index, item in enumerate(shopping_list, start=1):
+                    print(f"{index}. {item}")
 
-        elif choice == '4':
+        elif choice == 4:
             print("Goodbye!")
             break
 
         else:
-            print("Invalid choice. Please try again.")
-
+            print("Invalid choice. Please select 1–4.")
 
 if __name__ == "__main__":
     main()
-
